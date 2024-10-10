@@ -1,0 +1,181 @@
+html, body {
+    margin: 0;
+}
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+.wrapper {
+    width: 100%; /* Largura total para melhor responsividade */
+    max-width: 1920px; /* Limite máximo para telas grandes */
+    display: flex;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 100%; /* Largura total para o conteúdo */
+}
+.menu {
+    width: 15%;
+    background-color: rgb(218, 196, 155);
+    padding: 10px 20px 0px;
+}
+.menu ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding */
+}
+.menu li {
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+}
+.menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: black; /* Cor do texto do link */
+}
+.menu a:hover {
+    color: rgb(5, 108, 108); /* Cor ao passar o mouse */
+}
+.header {
+    background-color: rgb(5, 108, 108);
+    max-height: 250px;
+    overflow: hidden;
+}
+.header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+.content {
+    background-color: white;
+    min-height: 465px;
+    padding: 20px;
+    text-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.mission-vision-values {
+    display: flex; /* Usa Flexbox para alinhar as colunas em linha */
+    justify-content: space-between; /* Espaçamento igual entre as colunas */
+    margin: 20px 0; /* Espaçamento acima e abaixo do contêiner */
+}
+
+.column {
+    flex: 1; /* Cada coluna ocupa o mesmo espaço */
+    margin: 0 10px; /* Margem lateral entre as colunas */
+    background-color: white; /* Fundo branco para as colunas */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+.column h3 {
+    margin-top: 0; /* Remove margem superior do título */
+}
+.footer {
+    background-color: rgb(31, 21, 64);
+    min-height: 150px;
+    color: white; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 20px; /* Espaçamento interno */
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-row {
+    display: flex;
+    justify-content: left;
+}
+.form-column {
+    width: 30%; /* Largura das colunas */
+    margin-right: 5%;
+}
+.form-column label {
+    display: block; /* Faz com que o label ocupe toda a largura */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+}
+.form-column input,
+.form-column textarea {
+    width: 100%; /* Largura total dos campos */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+.button-container {
+    display: flex; /* Usa Flexbox para alinhar os botões em linha */
+    margin-top: 20px; /* Espaçamento acima do contêiner */
+}
+button:not(:last-child) {
+    margin-right: 10px; /* Adiciona espaço somente ao botão que não é o último */
+}
+button {
+    padding: 10px 15px; /* Aumenta o espaçamento interno */
+    background-color: rgb(4, 119, 75); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+button:hover {
+    background-color: rgb(6, 86, 58); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do botão */
+}
+.reset {
+    background-color: crimson;
+}
+.reset:hover {
+    background-color: rgb(154, 16, 43);
+}
+
+/* Responsividade com media queries */
+@media (max-width: 1200px) {
+    .wrapper {
+        padding-left: 10px; 
+        padding-right: 10px; 
+        flex-direction: column; /* Empilha elementos em telas menores */
+    }
+
+    .menu {
+        margin-bottom: 10px; 
+        padding-bottom: 10px; 
+        position: relative; 
+        z-index: 1; 
+        width: 100%; 
+        text-align: center; /* Centraliza o menu em telas pequenas */
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 100%; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        flex-flow: column; 
+        align-items: center; /* Centraliza o conteúdo na tela */
+    }
+
+    .footer {
+        font-size: 14px; 
+        padding-top: 15px; 
+        padding-bottom: 15px; 
+        text-align:center; /* Centraliza o texto no rodapé */
+    }
+}
+
+@media (max-width: 500px) {
+    .menu li {
+        margin-bottom: 5px; 
+        font-size: 14px; /* Ajusta o tamanho da fonte do menu em telas pequenas */
+    }
+
+    .content {
+        padding: 15px; 
+        min-height:auto; 
+        font-size:16px; /* Aumenta a legibilidade em telas pequenas */
+    }
+}
